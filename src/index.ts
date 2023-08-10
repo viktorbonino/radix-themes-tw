@@ -87,6 +87,7 @@ export const radixThemePreset: Config = {
       4: "var(--radius-4)",
       5: "var(--radius-5)",
       6: "var(--radius-6)",
+      item: "max(var(--radius-2),var(--radius-full))",
     },
     boxShadow: {
       1: "var(--shadow-1)",
