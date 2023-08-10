@@ -70,11 +70,9 @@ export const radixThemePreset: Config = {
   theme: {
     colors: {
       accent: getColor("accent", colorScale),
-      ...getColors(radixGrayColors),
+      ...getColors(radixGrayColors, true),
       gray: getGrayColor("gray", colorScale),
       ...getColors(radixColors),
-      ...getColors(radixGrayColors, true),
-
       overlay: "var(--color-overlay)",
       "panel-solid": "var(--color-panel-solid)",
       "panel-translucent": "var(--color-panel-translucent)",
