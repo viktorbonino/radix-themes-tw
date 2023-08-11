@@ -32,8 +32,10 @@ const getColor = (color: string, scale: number, alpha?: boolean) => {
     acc[i + 1] = `var(--${color}-${alpha ? "a" : ""}${i + 1})`;
     return acc;
   }, {} as Record<number | string, string>) as Record<string | number, string>;
-  colors[`9-contrast`] = `var(--${color}-9-contrast)`;
-  colors["surface"] = `var(--${color}-surface)`;
+  if (!alpha) {
+    colors[`9-contrast`] = `var(--${color}-9-contrast)`;
+    colors["surface"] = `var(--${color}-surface)`;
+  }
 
   return colors;
 };
@@ -43,7 +45,7 @@ const getGrayColor = (color: string, scale: number, alpha?: boolean) => {
     acc[i + 1] = `var(--${color}-${alpha ? "a" : ""}${i + 1})`;
     return acc;
   }, {} as Record<number | string, string>) as Record<string | number, string>;
-  colors[`2-translucent`] = `var(--${color}-2-translucent)`;
+  if (!alpha) colors[`2-translucent`] = `var(--${color}-2-translucent)`;
 
   return colors;
 };
@@ -57,7 +59,7 @@ const getColors = (arr: string[], isGray?: boolean) => {
   }, {} as Record<string, Record<number | string, string>>);
 
   const alphaColors = arr.reduce((acc, color) => {
-    acc[color] = isGray
+    acc[color + "A"] = isGray
       ? getGrayColor(color, colorScale, true)
       : getColor(color, colorScale, true);
     return acc;
