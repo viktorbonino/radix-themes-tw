@@ -75,6 +75,7 @@ export const radixThemePreset: Config = {
   theme: {
     colors: {
       accent: getColor("accent", colorScale),
+      accentA: getColor("accent", colorScale, true),
       ...getColors(radixGrayColors, true),
       gray: getGrayColor("gray", colorScale),
       ...getColors(radixColors),
