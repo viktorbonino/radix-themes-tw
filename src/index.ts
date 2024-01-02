@@ -82,6 +82,8 @@ export const radixThemePreset: Config = {
       ...getColors(radixGrayColors, true),
       gray: getGrayColor("gray", colorScale),
       ...getColors(radixColors),
+      whiteA: getColor("white", 12, true),
+      blackA: getColor("black", 12, true),
       overlay: "var(--color-overlay)",
       "panel-solid": "var(--color-panel-solid)",
       "panel-translucent": "var(--color-panel-translucent)",
