@@ -36,11 +36,9 @@ const getColor = (color: string, scale: number, alpha?: boolean) => {
     return acc;
   }, {} as Record<number | string, string>) as Record<string | number, string>;
   if (!alpha) {
-    colors[`9-contrast`] = `var(--${color}-9-contrast)`;
+    colors[`9-contrast`] = `var(--${color}-contrast)`;
     colors["surface"] =
-      color === "accent"
-        ? "var(--color-surface-accent)"
-        : `var(--${color}-surface)`;
+      color === "accent" ? "var(--color-accent)" : `var(--${color}-surface)`;
   }
 
   return colors;
@@ -51,7 +49,6 @@ const getGrayColor = (color: string, scale: number, alpha?: boolean) => {
     acc[i + 1] = `var(--${color}-${alpha ? "a" : ""}${i + 1})`;
     return acc;
   }, {} as Record<number | string, string>) as Record<string | number, string>;
-  if (!alpha) colors[`2-translucent`] = `var(--${color}-2-translucent)`;
 
   return colors;
 };
