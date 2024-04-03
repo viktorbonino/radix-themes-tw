@@ -38,7 +38,7 @@ const getColor = (color: string, scale: number, alpha?: boolean) => {
   if (!alpha) {
     colors["contrast"] = `var(--${color}-contrast)`;
     colors["surface"] =
-      color === "accent" ? "var(--color-accent)" : `var(--${color}-surface)`;
+      color === "accent" ? "var(--accent-surface)" : `var(--${color}-surface)`;
   }
 
   return colors;
