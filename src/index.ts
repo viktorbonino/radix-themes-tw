@@ -36,9 +36,9 @@ const getColor = (color: string, scale: number, alpha?: boolean) => {
     return acc;
   }, {} as Record<number | string, string>) as Record<string | number, string>;
   if (!alpha) {
-    colors[`9-contrast`] = `var(--${color}-contrast)`;
+    colors["contrast"] = `var(--${color}-contrast)`;
     colors["surface"] =
-      color === "accent" ? "var(--color-accent)" : `var(--${color}-surface)`;
+      color === "accent" ? "var(--accent-surface)" : `var(--${color}-surface)`;
   }
 
   return colors;
