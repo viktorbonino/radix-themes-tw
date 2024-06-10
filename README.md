@@ -1,7 +1,7 @@
 # Simple tailwind preset for Radix Themes
 
 ```bash
-npm install radix-themes-tw --dev
+npm install radix-themes-tw postcss-import --dev
 ```
 
 ## Tokens and Classes
@@ -16,6 +16,7 @@ For the tailwind classes check the preset code: https://github.com/viktorbonino/
 1. Open the `tailwind.config.ts` configuration file.
 2. Add this line to import dependency: `import { radixThemePreset } from 'radix-themes-tw';`.
 3. Add `radixThemePreset` under `presets`.
+4. Add `"postcss-import` under `plugins`.
 
 The file should look like this:
 
@@ -26,5 +27,19 @@ import { radixThemePreset } from 'radix-themes-tw';
 const config: Config = {
   // your existing configuration
   presets: [radixThemePreset]
+  plugins: {
+    // ...
+    "postcss-import": {},
+  }
 }
 ```
+Also your tailwind input css file should like this:
+```css
+@import "tailwindcss/base";
+@import "@radix-ui/themes/styles.css";
+
+@tailwind components;
+@tailwind utilities;
+```
+
+
