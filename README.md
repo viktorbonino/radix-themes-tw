@@ -7,7 +7,7 @@ npm install radix-themes-tw postcss-import --dev
 ## Tokens and Classes
 This preset overrides the default tailwind classes with the radix ones, except for the space tokens that starts with the rx suffix (for example you can use both `px-2` based on tailwind spacing and `px-rx-2` based on radix spacing).
 
-For the complete list of tokens check the radix documentation: https://www.radix-ui.com/themes/docs/theme/token-reference
+For the complete list of tokens check the radix documentation: [https://www.radix-ui.com/themes/docs/theme/token-reference](https://www.radix-ui.com/themes/docs/theme/overview)
 
 For the tailwind classes check the preset code: https://github.com/viktorbonino/radix-themes-tw/blob/main/src/index.ts
 
