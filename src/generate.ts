@@ -143,8 +143,8 @@ export function generateTheme() {
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-normal: 400;
-  --font-weight-normal: 500;
-  --font-weight-medium: 700;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
   /* border radius */
   --radius-1: var(--radius-1);
