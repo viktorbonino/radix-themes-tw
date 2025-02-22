@@ -26,7 +26,7 @@ For the tailwind classes check the preset theme: https://github.com/viktorbonino
 your tailwind input css file should like this:
 
 ```css
-@import "radix-themes-tw/theme.css";
+@import "radix-themes-tw";
 ```
 
 That's it!
