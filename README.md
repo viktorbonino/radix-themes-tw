@@ -2,10 +2,10 @@
 
 ## Compatibility
 
-| Tailwind CSS Version | Radix themes Version | Preset Version                                                            |
-| -------------------- | -------------------- | ------------------------------------------------------------------------- |
-| v1                   | v3                   | v1 (current)                                                              |
-| v0                   | v3                   | ([v0.2.3](https://github.com/songkeys/tailwind-preset-mantine/tree/v1))\* |
+| Tailwind CSS Version | Radix themes Version | Preset Version                                                        |
+| -------------------- | -------------------- | --------------------------------------------------------------------- |
+| v3                   | v3                   | v1 (current)                                                          |
+| v3                   | v3                   | ([v0.2.3](https://github.com/viktorbonino/radix-themes-tw/tree/v1))\* |
 
 ## Installation
 
@@ -34,11 +34,9 @@ That's it!
 Now you can use tailwind with radix-themes's style applied:
 
 ```tsx
-import { Button } from "@mantine/core";
-
 export default function Page() {
   // `bg-tomato-1` will be `background-color: var(--tomato-1)`
   // `text-accent-contrast` will be `color: var(--accent-contrast);`
-  return <Button className="bg-tomato-1 text-accent-contrast">Hello</Button>;
+  return <div className="bg-tomato-1 text-accent-contrast">Hello</div>;
 }
 ```
