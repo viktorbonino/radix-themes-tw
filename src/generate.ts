@@ -41,7 +41,7 @@ export function generateTheme() {
 @layer theme, base, radix-themes, components, utilities;
 
 @import 'tailwindcss';
-@import '@radix-ui/themes/styles.css';
+@import '@radix-ui/themes/styles.css' layer(radix-themes);
 
 @theme inline {
   /* colors - other */

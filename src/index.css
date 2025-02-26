@@ -2,8 +2,8 @@
 
 @layer theme, base, radix-themes, components, utilities;
 
-@import "tailwindcss";
-@import "@radix-ui/themes/styles.css" layer(radix-themes);
+@import 'tailwindcss';
+@import '@radix-ui/themes/styles.css' layer(radix-themes);
 
 @theme inline {
   /* colors - other */
@@ -81,7 +81,7 @@
   --leading-7: var(--line-height-7);
   --leading-8: var(--line-height-8);
   --leading-9: var(--line-height-9);
-
+  
   /* letter spacing */
   --text-1--letter-spacing: var(--letter-spacing-1);
   --text-2--letter-spacing: var(--letter-spacing-2);
@@ -92,7 +92,7 @@
   --text-7--letter-spacing: var(--letter-spacing-7);
   --text-8--letter-spacing: var(--letter-spacing-8);
   --text-9--letter-spacing: var(--letter-spacing-9);
-
+  
   --tracking-1: var(--letter-spacing-1);
   --tracking-2: var(--letter-spacing-2);
   --tracking-3: var(--letter-spacing-3);
@@ -117,7 +117,7 @@
   --radius-4: var(--radius-4);
   --radius-5: var(--radius-5);
   --radius-6: var(--radius-6);
-  --radius-item: max(var(--radius-2), var(--radius-full));
+  --radius-item: max(var(--radius-2),var(--radius-full));
   --radius-full: 9999px;
 
   /* shadow */
@@ -128,8 +128,9 @@
   --shadow-5: var(--shadow-5);
   --shadow-6: var(--shadow-6);
 
-  /* colors - all */
 
+  /* colors - all */
+  
   --color-accent-1: var(--accent-1);
   --color-accent-2: var(--accent-2);
   --color-accent-3: var(--accent-3);
