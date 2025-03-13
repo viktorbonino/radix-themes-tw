@@ -43,6 +43,10 @@ export function generateTheme() {
 @import 'tailwindcss';
 @import '@radix-ui/themes/styles.css' layer(radix-themes);
 
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant translucent (&:where([data-panel-background="translucent"] *));
+@custom-variant solid (&:where([data-panel-background="solid"] *));
+
 @theme inline {
   /* colors - other */
   --color-overlay: var(--color-overlay);
@@ -50,6 +54,7 @@ export function generateTheme() {
   --color-panel-solid: var(--color-panel-solid);
   --color-panel-translucent: var(--color-panel-translucent);
   --color-transparent: transparent;
+  --color-background: var(--color-background);
 
   --color-whiteA-1: var(--white-a1);
   --color-whiteA-2: var(--white-a2);
