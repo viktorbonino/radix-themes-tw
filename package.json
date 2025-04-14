@@ -1,28 +1,32 @@
 {
   "name": "radix-themes-tw",
-  "version": "0.2.3",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Integrate Radix Themes with Tailwind CSS",
+  "homepage": "https://github.com/viktorbonino/radix-themes-tw#readme",
+  "bugs": {
+    "url": "https://github.com/viktorbonino/radix-themes-tw/issues"
+  },
+  "keywords": [
+    "radix themes",
+    "tailwind",
+    "preset"
+  ],
+  "main": "src/index.css",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch"
+    "generate": "tsx ./src/cli.ts > ./src/index.css"
   },
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
+    ".": "./src/index.css",
+    "./theme.css": "./src/theme.css",
     "./package.json": "./package.json"
   },
-  "keywords": [],
   "author": "Viktor Bonino",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.4.9",
-    "tailwindcss": "^3.3.3",
-    "tsup": "^7.2.0",
-    "typescript": "^5.1.6"
+    "tailwindcss": "^4",
+    "typescript": "^5.1.6",
+    "tsx": "^4.19.3"
   }
 }
