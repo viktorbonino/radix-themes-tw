@@ -4,7 +4,7 @@
 
 | Tailwind CSS Version | Radix themes Version | Preset Version                                                        |
 | -------------------- | -------------------- | --------------------------------------------------------------------- |
-| v3                   | v3                   | v1 (current)                                                          |
+| v4                   | v3                   | v1 (current)                                                          |
 | v3                   | v3                   | ([v0.2.3](https://github.com/viktorbonino/radix-themes-tw/tree/v1))\* |
 
 ## Installation
