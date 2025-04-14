@@ -2,10 +2,10 @@
 
 ## Compatibility
 
-| Tailwind CSS Version | Radix themes Version | Preset Version                                                        |
-| -------------------- | -------------------- | --------------------------------------------------------------------- |
-| v4                   | v3                   | v1 (current)                                                          |
-| v3                   | v3                   | ([v0.2.3](https://github.com/viktorbonino/radix-themes-tw/tree/v1))\* |
+| Tailwind CSS Version | Preset Version                                                        |
+| -------------------- |-----------------------------------------------------------------------|
+| v4                   | v1 (current)                                                          |
+| v3                   | ([v0.2.3](https://www.npmjs.com/package/radix-themes-tw/v/0.2.3))\*   |
 
 ## Installation
 
