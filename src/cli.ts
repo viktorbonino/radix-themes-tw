@@ -1,5 +1,12 @@
-import { generateTheme } from "./generate";
+import { generateTheme, generateThemeWithImports } from "./generate";
 
-const css = generateTheme();
+const type = process.argv[2] || "theme";
 
-console.log(css);
+if (type === "theme") {
+  console.log(generateTheme({ showComments: true }));
+} else if (type === "theme-with-imports") {
+  console.log(generateThemeWithImports());
+} else {
+  console.error("Invalid type. Use 'theme' or 'theme-with-imports'");
+  process.exit(1);
+}
