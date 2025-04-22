@@ -1,6 +1,6 @@
 {
   "name": "radix-themes-tw",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Integrate Radix Themes with Tailwind CSS",
   "homepage": "https://github.com/viktorbonino/radix-themes-tw#readme",
   "bugs": {
@@ -13,7 +13,8 @@
   ],
   "main": "src/index.css",
   "scripts": {
-    "generate": "tsx ./src/cli.ts > ./src/index.css"
+    "generate-theme-with-imports": "tsx ./src/cli.ts theme-with-imports > ./src/index.css",
+    "generate-theme": "tsx ./src/cli.ts theme > ./src/theme.css"
   },
   "type": "module",
   "exports": {
@@ -27,6 +28,7 @@
     "@types/node": "^20.4.9",
     "tailwindcss": "^4",
     "typescript": "^5.1.6",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "@radix-ui/themes": "^3.2.1"
   }
 }
