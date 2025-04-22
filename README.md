@@ -2,10 +2,10 @@
 
 ## Compatibility
 
-| Tailwind CSS Version | Preset Version                                                        |
-| -------------------- |-----------------------------------------------------------------------|
-| v4                   | v1 (current)                                                          |
-| v3                   | ([v0.2.3](https://www.npmjs.com/package/radix-themes-tw/v/0.2.3))\*   |
+| Tailwind CSS Version | Preset Version                                                      |
+| -------------------- | ------------------------------------------------------------------- |
+| v4                   | v1 (current)                                                        |
+| v3                   | ([v0.2.3](https://www.npmjs.com/package/radix-themes-tw/v/0.2.3))\* |
 
 ## Installation
 
@@ -23,7 +23,9 @@ For the tailwind classes check the preset theme: https://github.com/viktorbonino
 
 ## Usage
 
-your tailwind input css file should like this:
+### 1. All-in-one import (recommended)
+
+When importing the styles, instead of importing the tailwind css file, importing this preset in the css file:
 
 ```css
 @import "radix-themes-tw";
@@ -39,4 +41,17 @@ export default function Page() {
   // `text-accent-contrast` will be `color: var(--accent-contrast);`
   return <div className="bg-tomato-1 text-accent-contrast">Hello</div>;
 }
+```
+
+### 2. Manual import (advanced)
+
+Note that you don't have to import tailwind or radix-themes styles, this preset will handle that for you. If you want to import it yourself, you can use the `./theme.css` file:
+
+```css
+@layer theme, base, radix-themes, components, utilities;
+
+@import "tailwindcss"; /* <-- import the tailwind styles (they have theme, base, components, utilities layers already assigned) */
+@import "@radix-ui/themes/styles.css" layer(radix-themes); /* <-- import the radix-themes styles */
+
+@import "radix-themes-tw/theme.css"; /* <-- import the preset */
 ```
